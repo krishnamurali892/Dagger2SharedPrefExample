@@ -28,10 +28,10 @@ public class DaggerMainActivity extends AppCompatActivity {
     Button btnRetrieve;
 
     private SharedPrefComponent sharedPrefComponent;
-    private static final String KEY_NAME = "name";
-
     @Inject
     SharedPreferences sharedPreferences;
+
+    private static final String KEY_NAME = "name";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,5 @@ public class DaggerMainActivity extends AppCompatActivity {
                 tvRetrieve.setText(sharedPreferences.getString(KEY_NAME, "empty"));
             }
         });
-
     }
 }
